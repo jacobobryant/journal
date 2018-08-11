@@ -15,6 +15,7 @@ function commit {
 function edit {
     touch $dir/0.md
     nvim $(echo $dir/* | awk '{print $NF}')
+    commit
 }
 
 function new {
@@ -24,6 +25,7 @@ function new {
     done
     touch $dir/$i.md
     nvim $dir/$i.md
+    commit
 }
 
 cmd=$1
