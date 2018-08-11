@@ -9,7 +9,7 @@ mkdir -p $dir
 
 function commit {
     git commit -a -m hey
-    git push
+    git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 function edit {
